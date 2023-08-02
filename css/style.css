@@ -1,0 +1,439 @@
+/* 
+FONTS
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Arvo', serif;
+font-family: 'Dancing Script', cursive;
+*/
+
+
+/* Global styles
+************************************************** */
+
+h1{
+	font-family: 'Arvo', serif;
+	font-weight: bold;
+}
+
+a:link {																																													
+	text-decoration: none;
+	color: black;																																			
+}
+
+a:visited{
+	color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Dancing+Script&display=swap');
+
+
+
+/* Common Header
+************************************************** */
+#nav-header, #header-member-admin{
+	background-color: #D7A86E;
+	height: 120px;
+	width: 100%;
+}
+
+#search{
+width: 400px;
+margin-right: 20px;
+}
+
+#website-name{
+	font-size: 50px;
+	font-family: 'Alfa Slab One', cursive;
+	margin-bottom: 0 ;
+	padding-bottom: 0;
+}
+
+.company-logo{
+	border-radius: 100px;
+	float: left;
+	margin: 10px;
+}
+
+#nav-header ul, #footer ul, #header-member-admin ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+  }
+  
+  #nav-header li, #header-member-admin li {
+	float: left;
+  }
+  
+  .header-bottom-left li a {
+	font-size: 20px;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 5px 16px 10px;
+	text-decoration: none;
+	font-family: 'Arvo', serif;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+	background-color: gainsboro;
+  }
+
+
+  /* The dropdown container */
+.dropdown {
+	float: right;
+	overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	min-width: 100px;
+	font-family: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: red;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 100px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+	background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+
+/* Log In Page
+************************************************** */
+
+.cancelbtn a:visited{
+text-decoration: none;
+}
+
+
+/* Home Page
+************************************************** */
+
+#promo-img{
+	border-radius: 20px;
+	margin: 20px;
+	justify-content: center;
+	width: 30%;
+	height: 500px;
+	float: left;
+}
+
+#event-img{
+	border-radius: 20px;
+	margin: 20px;
+	width: 30%;
+	height: 500px;
+	float: left;
+}
+
+.event-container {
+	font-family: "Roboto", sans-serif;
+	margin: 20px;
+	width: 30%;
+	height: 500px;
+	float: left;
+  }
+  
+  .event-container h3.year {
+	font-size: 20px;
+	text-align: left;
+	margin-top: 0;
+	margin-bottom: 0;
+  }
+  
+  .event-container .event {
+	box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+	display: flex;
+	border-radius: 8px;
+	margin: 10px 0;
+  }
+  
+  .event .event-left {
+	background: #222;
+	min-width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #eee;
+	padding: 8px 8px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 8px 0 0 8px;
+  }
+  
+  .event .event-left .date {
+	font-size: 20px;
+  }
+  
+  .event .event-left .month {
+	font-size: 16px;
+	font-weight: normal;
+  }
+  
+  .event .event-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 12px;
+  }
+  
+  .event .event-right h3.event-title {
+	font-size: 16px;
+	margin: 5px 0 5px 0;
+	color: #218bbb;
+  }
+  
+  
+  .event .event-right .event-timing img {
+	height: 20px;
+	padding-right: 8px;
+  }
+  
+  @media (max-width: 550px) {
+	.event {
+	  flex-direction: column;
+	}
+  
+	.event .event-left {
+	  padding: 0;
+	  border-radius: 8px 8px 0 0;
+	}
+  
+	.event .event-left .event-date .date,
+	.event .event-left .event-date .month {
+	  display: inline-block;
+	  font-size: 24px;
+	}
+  
+	.event .event-left .event-date {
+	  padding: 10px 0;
+	}
+  }
+
+  .event-timing{
+	font-size: 15px;
+	padding-bottom: 5px;
+  }
+
+
+/* Books Lists
+************************************************** */
+.ui-widget-content .books{
+	height: 1100px;
+}
+
+.books-col-1, .books-col-2{
+	box-sizing: border-box;
+}
+.books-col-1 {
+	width: 47%;
+	float: left;
+}
+
+.books-col-2 {
+	width: 47%;
+	float: left;
+}
+.books img{
+	float: left;
+	margin:0 20px  40px 15%;
+	height: 310px;
+	width: 200px;
+}
+
+.books .btn {
+    color: #F7FFF7;
+    background: #2F3061;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+	margin: 5px 0;
+}
+
+.books ul{
+float: left;
+line-height: 30px;
+}
+
+section{
+	clear: both;
+}
+
+
+/* Registration page
+************************************************** */
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin: 2% 10%;
+	border-width: 0px;
+	width: 500px;
+}
+
+table td{
+	padding: 10px;
+}
+
+/* Event page
+************************************************** */
+.event-page h2{
+color: #218bbb;
+}
+
+/* Enquiry page
+************************************************** */
+.enquiry-container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin: 0 10% 20px 15%;
+	width: 500px;
+	float: left;
+	height: 600px;
+
+  }
+
+#map{
+	float: left;
+	width: 500px;
+	margin-right: 20px;
+}
+
+#contact-details{
+	float: left;
+	width: 500px;
+	margin: 0px;
+	line-height: 30px;
+	
+}
+
+
+/* Privacy policy
+************************************************** */
+
+
+/* Site Map
+************************************************** */
+.sitemap-page a {
+	color: #218bbb;
+}
+
+
+/* About-Us
+************************************************** */
+.mission-container {
+	margin: 5% 10% 5% 10%;
+	background-color: white;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.aboutus-page {
+  background-image: url('/resources/images/background1.jpg');
+
+}
+
+.aboutus-page p{
+	font-size: 20px;
+	color: #222;
+}
+
+/* Common Footer
+************************************************** */
+#footer{
+	clear: both;
+}
+
+.footer-top{
+	background-color: #FFEBC1;
+	float: left;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.fcol1, .fcol2, .fcol3, .fcol4{
+	width: 476px;
+	height: 200px;
+	margin-top: 50px;
+	float: left;
+	text-align: left;
+
+	line-height: 30px;
+}
+
+.fcol1{
+	display: flex;
+	justify-content: center;
+}
+
+.footer-bottom{
+	background-color: #D7A86E;
+	clear: both;
+	font-size: 16px;
+	padding: 7px 10px;
+	height: 30px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

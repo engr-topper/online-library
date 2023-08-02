@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Log-In</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+    <style>
+        /* Bordered form */
+        form {
+          border: 3px solid #f1f1f1;
+          width: 450px;
+          margin: 100px auto;
+          border-radius: 5px;
+        }
+        
+        /* Full-width inputs */
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+        
+        /* Set a style for all buttons */
+        button {
+          background-color: #04AA6D;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          border-radius: 3px;
+        }
+        
+        /* Add a hover effect for buttons */
+        button:hover {
+          opacity: 0.8;
+        }
+        
+        /* Extra style for the cancel button (red) */
+        .cancelbtn {
+          width: auto;
+          padding: 10px 18px;
+          background-color: #f44336;
+        }
+        
+        /* Center the avatar image inside this container */
+        .imgcontainer {
+          text-align: center;
+          margin: 24px 0 12px 0;
+        }
+        
+        /* Avatar image */
+        img.avatar {
+          border-radius: 50%;
+        }
+        
+        /* Add padding to containers */
+        .container {
+          padding: 16px;
+        }
+        
+        /* The "Forgot password" text */
+        span.psw {
+          float: right;
+          padding-top: 16px;
+        }
+        
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+          span.psw {
+            display: block;
+            float: none;
+          }
+          .cancelbtn {
+            width: 100%;
+          }
+        }
+        
+        </style>
+</head>
+<body>
+  
+  
+  <form id="admin-login-form" >
+    <div class="imgcontainer">
+      <a href="home.html"><img src="/resources/images/logo.png" alt="Silent Library" class="avatar" height="125px" width="125px"></a>
+    </div>
+  
+    <div class="container">
+      <h3 style="text-align: center;">Administrator Log In</h3>
+      <label for="uname"><b>Email</b></label>
+      <input id="email" type="text" placeholder="Enter your registered email" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input id="pass" type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn"><a href="home.html">Cancel</a></button>
+    </div>
+  </form>
+
+  <script>
+    // if document is ready/loaded
+    $(document).ready(function() {
+  
+      function defaultAdmin() {
+        
+ 
+ //if no 'admin' table existing, 'admin' will be an empty array; otherwise, get json in localstorage
+ let admin;
+
+ if(localStorage.getItem('admin') === null) {
+     admin = [];
+ } else {
+     admin = JSON.parse(localStorage.getItem('admin'));
+ }
+
+
+ //check if default credentials exists
+ let result = admin.find(val => val.email === "admin@silent-library.com");
+ if(typeof result === "undefined") {
+
+     //add new credentials to admin table
+     admin.push({
+         email: "admin@silent-library.com",
+         password: "00000"
+     });
+
+     //save new list to localstorage as json
+     localStorage.setItem('admin', JSON.stringify(admin));
+ }
+}
+
+defaultAdmin();
+  
+  
+  
+  //initialize a variable for user table
+  let admin;
+  
+  //if submit button is clicked
+  $('#admin-login-form').submit(function() {
+  console.log('any text')
+
+      //get user inputs
+      const email = $('#email').val();
+      const pass = $('#pass').val();
+  
+      //check for empty input(show alert or check creds)
+      if(email === "" || pass === "") {
+          emptyInput();
+      } else {
+          checkUser(email, pass);
+      }
+  
+      //clear input fields then end function
+      $('#admin-login-form').trigger('reset');
+      return false;
+  });
+  
+  //runs if there's an empty input
+  function emptyInput() {
+      $('#msg').html('Fill in all required fields.');
+  }
+  
+  
+    //for checking user credentials
+    function checkUser(email, pass) {
+  
+  //get json in localstorage
+  admin = JSON.parse(localStorage.getItem('admin'));
+  
+  //find email in users table
+  let result = admin.find(val => val.email === email);
+  
+  //check if email exists
+  if(result === "") {
+      wrongCred();
+  } else {
+  
+      //check if password is correct
+      if(result.password === pass) {
+          loginUser(email);
+      } else {
+  
+          //clear input fields and show alert
+          $('#admin-login-form').trigger('reset');
+          $('#msg').html('Incorrect Email or Password.');
+      }
+  }
+  
+  return false;
+  }
+  
+  //if login is successful
+  function loginUser(email) {
+  
+  //save email to localstorage as json (act as session variable)
+  localStorage.setItem('current', email);
+  
+  //redirect to homepage
+  window.location.href = "borrowers-list.html";
+  
+  }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

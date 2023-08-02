@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promotions</title>
+
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!--jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <!-- navigation header -->
+    <div id="nav-header"></div>
+
+    <h1>PROMOTIONS</h1>
+    <div>
+    <p style="font-size: 20px;">Don't miss out! Grab your copy now! More details coming soon..</p>
+    <center><img src="/resources/images/promotion3.jpg" alt="Promo image" width="80%" style="margin-bottom: 20px;"></center>
+    
+</div>
+
+<!--footer-->
+   <div id="footer"></div>
+
+   <script>
+       // if document is ready/loaded
+       $(document).ready(function(){
+
+           //include navigation links
+           $("#nav-header").load('nav-header.html');
+           $("#footer").load('footer.html');
+       })
+   </script>   
+</body>
+</html>

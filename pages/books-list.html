@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books Lists</title>
+	    
+	<!-- External CSS link -->
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!--jQuery CDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Dancing+Script&display=swap" rel="stylesheet">
+   
+	<!--jQuery UI-->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs({
+      beforeLoad: function( event, ui ) {
+        ui.jqXHR.fail(function() {
+          ui.panel.html(
+            "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+            "If this wouldn't be a demo." );
+        });
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+
+<!-- navigation header -->
+<div id="nav-header"></div>
+
+	<h1>BOOKS LISTS</h1>
+	
+	<div id="tabs">
+		<ul>
+		  <li><a href="#tabs-1">Featured Books</a></li>
+		  <li><a href="#tabs-2">Accounting</a></li>
+		  <li><a href="#tabs-3">Engineering</a></li>
+		  <li><a href="#tabs-4">Information & Technology</a></li>
+		</ul>
+
+
+	<div class="books" id="tabs-1">
+	<div class="books-col-1">
+          <!-- Book 1 -->
+          <section class="book-item-1">
+            <img src="/resources/images/book1.PNG" alt="Book image">
+            <h3>Rich Habits - 33 Daily Habits of the Rich & Wealthy!</h3>
+            <ul>
+				<li><b>Author: </b>Jacob Reimer</li>
+				<li><b>Publisher: </b>Watchtower Publishing</li>
+				<li><b>Year Published: </b>Jan 2015</li>
+				<li><b>ISBN: </b>978-0993957932</li>
+				<li><b>Category: </b>Entrepreneurship</li>
+				<li><b>Status: </b>Available</li>
+				<a class="btn" href="">Borrow</a>
+				<a class="btn" href="">Buy book</a>
+			</ul>
+		  </section>
+
+          <!-- Book 2 -->
+		  <section class="book-item-2">
+            <img src="/resources/images/book2.JPG" alt="Book image">
+            <h3>Effective Project Management in Easy Steps</h3>
+            <ul>
+				<li><b>Author: </b>John Carroll</li>
+				<li><b>Publisher: </b>In Easy Steps</li>
+				<li><b>Year Published: </b>May 2012</li>
+				<li><b>ISBN: </b>978-1840784466</li>
+				<li><b>Category: </b>Project Management</li>
+				<li><b>Status: </b>Available</li>
+				<a class="btn" href="">Borrow</a>
+				<a class="btn" href="">Buy book</a>
+			</ul>
+          </section>
+
+          <!-- Book 3 -->
+		  <section class="book-item-2">
+            <img src="/resources/images/book3.JPG" alt="Book image">
+            <h3>Retraining the Brain: A 45-Day Plan to Conquer Stress and Anxiety</h3>
+            <ul>
+				<li><b>Author: </b>Frank Lawlis</li>
+				<li><b>Publisher: </b>Plume Books</li>
+				<li><b>Year Published: </b>Sep 2009</li>
+				<li><b>ISBN: </b>978-0452295629</li>
+				<li><b>Category: </b>Stress Management</li>
+				<li><b>Status: </b>Available</li>
+				<a class="btn" href="">Borrow</a>
+				<a class="btn" href="">Buy book</a>
+			</ul>
+          </section>
+
+		</div>
+		<div class="books-col-2">
+			<!-- Book 4 -->
+			<section class="book-item-1">
+			  <img src="/resources/images/book4.jpg" alt="Book image">
+			  <h3>Direction, Alignment, Commitment</h3>
+			  <ul>
+				  <li><b>Author: </b>Cynthia McCauley</li>
+				  <li><b>Publisher: </b>Creative Leadership</li>
+				  <li><b>Year Published: </b>Sep 2015</li>
+				  <li><b>ISBN: </b>978-1604915532</li>
+				  <li><b>Category: </b>Education</li>
+				  <li><b>Status: </b>Available</li>
+				  <a class="btn" href="">Borrow</a>
+				  <a class="btn" href="">Buy book</a>
+			  </ul>
+			</section>
+
+			<!-- Book 5 -->
+			<section class="book-item-2">
+			  <img src="/resources/images/book5.JPG" alt="Book image">
+			  <h3>Trust Agents: Using the Web to Build Influence, Improve Reputation, and Earn Trust</h3>
+			  <ul>
+				  <li><b>Author: </b>Chris Brogan</li>
+				  <li><b>Publisher: </b>John Wiley & Sons</li>
+				  <li><b>Year Published: </b>Aug 2010</li>
+				  <li><b>ISBN: </b>978-0470635490</li>
+				  <li><b>Category: </b>Strategic Planning</li>
+				  <li><b>Status: </b>Available</li>
+				  <a class="btn" href="">Borrow</a>
+				  <a class="btn" href="">Buy book</a>
+			  </ul>
+			</section>
+
+			<!-- Book 6 -->
+			<section class="book-item-2">
+				<img src="/resources/images/book6.jpg" alt="Book image">
+				<h3>Blue Ocean Leadership (Harvard Business Review Classics)</h3>
+				<ul>
+					<li><b>Author: </b>W. Chan Kim</li>
+					<li><b>Publisher: </b>Harvard Business School</li>
+					<li><b>Year Published: </b>Jun 2017</li>
+					<li><b>ISBN: </b>978-1633692640</li>
+					<li><b>Category: </b>Strategic Planning</li>
+					<li><b>Status: </b>Available</li>
+					<a class="btn" href="">Borrow</a>
+					<a class="btn" href="">Buy book</a>
+				</ul>
+			  </section>			
+  
+		  </div>
+	</div>
+
+	<div class="books" id="tabs-2">
+		<div class="books-col-1">
+			  <!-- Book 1 -->
+			  <section class="book-item-1">
+				<img src="/resources/images/book-a1.jpg" alt="Book image">
+				<h3>Accounting All-in-One For Dummies with Online Practice</h3>
+				<ul>
+					<li><b>Author: </b>Kenneth W. Boyd</li>
+					<li><b>Publisher: </b>For Dummies</li>
+					<li><b>Year Published: </b>Apr 2018</li>
+					<li><b>ISBN: </b>978-1119453895</li>
+					<li><b>Category: </b>Accounting</li>
+					<li><b>Status: </b>Available</li>
+					<a class="btn" href="">Borrow</a>
+					<a class="btn" href="">Buy book</a>
+				</ul>
+			  </section>
+	
+			  <!-- Book 2 -->
+			  <section class="book-item-2">
+				<img src="/resources/images/book-a2.jpg" alt="Book image">
+				<h3>QuickBooks Online for Beginners 2023: 
+					The Complete Step-By-Step Guide to Mastering QuickBooks Online 
+					</h3>
+				<ul>
+					<li><b>Author: </b>Joe Cliff</li>
+					<li><b>Publisher: </b>Independently published</li>
+					<li><b>Year Published: </b>Dec 2022</li>
+					<li><b>ISBN: </b>979-8371225900</li>
+					<li><b>Category: </b>Accounting</li>
+					<li><b>Status: </b>Available</li>
+					<a class="btn" href="">Borrow</a>
+					<a class="btn" href="">Buy book</a>
+				</ul>
+			  </section>
+	
+			  <!-- Book 3 -->
+			  <section class="book-item-2">
+				<img src="/resources/images/book-a3.jpg" alt="Book image">
+				<h3>Bookkeeping: An Essential Guide to Bookkeeping for Beginners 
+					along with Basic Accounting Principles 
+					</h3>
+				<ul>
+					<li><b>Author: </b>Robert McCarthy</li>
+					<li><b>Publisher: </b>Independently published</li>
+					<li><b>Year Published: </b>Jul 2020</li>
+					<li><b>ISBN: </b>979-8671203769</li>
+					<li><b>Category: </b>Accounting</li>
+					<li><b>Status: </b>Available</li>
+					<a class="btn" href="">Borrow</a>
+					<a class="btn" href="">Buy book</a>
+				</ul>
+			  </section>
+	
+			</div>
+			<div class="books-col-2">
+				<!-- Book 4 -->
+				<section class="book-item-1">
+				  <img src="/resources/images/book-a4.jpg" alt="Book image">
+				  <h3>Excel: The Complete Illustrative Guide for Beginners to Learning any Fundamental, Formula, Function and Chart </h3>
+				  <ul>
+					  <li><b>Author: </b>Nigel Tillery</li>
+					  <li><b>Publisher: </b>Independently published</li>
+					  <li><b>Year Published: </b>May 2022</li>
+					  <li><b>ISBN: </b>979-8824373264</li>
+					  <li><b>Category: </b>Accounting</li>
+					  <li><b>Status: </b>Available</li>
+					  <a class="btn" href="">Borrow</a>
+					  <a class="btn" href="">Buy book</a>
+				  </ul>
+				</section>
+	
+				<!-- Book 5 -->
+				<section class="book-item-2">
+				  <img src="/resources/images/book-a5.jpg" alt="Book image">
+				  <h3>Small Business Taxes: The Most Complete and Updated Guide with 
+					Tips and Tax Loopholes You Need to Know</h3>
+				  <ul>
+					  <li><b>Author: </b>Martin J. Kallman</li>
+					  <li><b>Publisher: </b>Thalice and Rewble Press</li>
+					  <li><b>Year Published: </b>Nov 2022</li>
+					  <li><b>ISBN: </b>978-1801719988</li>
+					  <li><b>Category: </b>Accounting</li>
+					  <li><b>Status: </b>Available</li>
+					  <a class="btn" href="">Borrow</a>
+					  <a class="btn" href="">Buy book</a>
+				  </ul>
+				</section>
+	
+				<!-- Book 6 -->
+				<section class="book-item-2">
+					<img src="/resources/images/book-a6.jpg" alt="Book image">
+					<h3>Business Plan Essentials You Always Wanted To Know</h3>
+					<ul>
+						<li><b>Author: </b>Dr. AnnaMaria Bliven</li>
+						<li><b>Publisher: </b>Vibrant Publishers</li>
+						<li><b>Year Published: </b>Aug 2022</li>
+						<li><b>ISBN: </b>978-1636511214</li>
+						<li><b>Category: </b>Accounting</li>
+						<li><b>Status: </b>Available</li>
+						<a class="btn" href="">Borrow</a>
+						<a class="btn" href="">Buy book</a>
+					</ul>
+				  </section>			
+	  
+			  </div>
+	</div>
+
+	<div class="books" id="tabs-3">
+			<div class="books-col-1">
+				  <!-- Book 1 -->
+				  <section class="book-item-1">
+					<img src="/resources/images/book-e1.jpg" alt="Book image">
+					<h3>Engineering in Plain Sight: 
+						An Illustrated Field Guide to the Constructed Environment
+						</h3>
+					<ul>
+						<li><b>Author: </b>Grady Hillhouse</li>
+						<li><b>Publisher: </b>No Starch Press</li>
+						<li><b>Year Published: </b>Nov 2022</li>
+						<li><b>ISBN: </b>978-1718502321</li>
+						<li><b>Category: </b>Engineering</li>
+						<li><b>Status: </b>Available</li>
+						<a class="btn" href="">Borrow</a>
+						<a class="btn" href="">Buy book</a>
+					</ul>
+				  </section>
+		
+				  <!-- Book 2 -->
+				  <section class="book-item-2">
+					<img src="/resources/images/book-e2.jpg" alt="Book image">
+					<h3>Critical thinking, Logic & Problem Solving</h3>
+					<ul>
+						<li><b>Author: </b>Bigrocks Thinking</li>
+						<li><b>Publisher: </b>Independently published</li>
+						<li><b>Year Published: </b>Nov 2022</li>
+						<li><b>ISBN: </b>979-8363860713</li>
+						<li><b>Category: </b>Engineering</li>
+						<li><b>Status: </b>Available</li>
+						<a class="btn" href="">Borrow</a>
+						<a class="btn" href="">Buy book</a>
+					</ul>
+				  </section>
+		
+				  <!-- Book 3 -->
+				  <section class="book-item-2">
+					<img src="/resources/images/book-e3.jpg" alt="Book image">
+					<h3>Wastewater Treatment Fundamentals II-- 
+						Solids Handling and Support Systems </h3>
+					<ul>
+						<li><b>Author: </b>Water Environment Federation</li>
+						<li><b>Publisher: </b>Independently published</li>
+						<li><b>Year Published: </b>Sep 2021</li>
+						<li><b>ISBN: </b>978-1572784031</li>
+						<li><b>Category: </b>Engineering</li>
+						<li><b>Status: </b>Available</li>
+						<a class="btn" href="">Borrow</a>
+						<a class="btn" href="">Buy book</a>
+					</ul>
+				  </section>
+		
+				</div>
+				<div class="books-col-2">
+					<!-- Book 4 -->
+					<section class="book-item-1">
+					  <img src="/resources/images/book-e4.jpg" alt="Book image">
+					  <h3>DThe Harvesting Rainwater: Dominate your Home's Drought With the 8 Principles</h3>
+					  <ul>
+						  <li><b>Author: </b>Brad Allen</li>
+						  <li><b>Publisher: </b>Independently published</li>
+						  <li><b>Year Published: </b>Oct 2022</li>
+						  <li><b>ISBN: </b>979-8358775695</li>
+						  <li><b>Category: </b>Engineering</li>
+						  <li><b>Status: </b>Available</li>
+						  <a class="btn" href="">Borrow</a>
+						  <a class="btn" href="">Buy book</a>
+					  </ul>
+					</section>
+		
+					<!-- Book 5 -->
+					<section class="book-item-2">
+					  <img src="/resources/images/book-e5.jpg" alt="Book image">
+					  <h3>Environmental Engineering 
+						FE/EIT Preparation Sample Questions and Solutions
+						</h3>
+					  <ul>
+						  <li><b>Author: </b>Anthem P.</li>
+						  <li><b>Publisher: </b>Independently published</li>
+						  <li><b>Year Published: </b>Apr 2016</li>
+						  <li><b>ISBN: </b>978-1532827235</li>
+						  <li><b>Category: </b>Engineering</li>
+						  <li><b>Status: </b>Available</li>
+						  <a class="btn" href="">Borrow</a>
+						  <a class="btn" href="">Buy book</a>
+					  </ul>
+					</section>
+		
+					<!-- Book 6 -->
+					<section class="book-item-2">
+						<img src="/resources/images/book-e6.jpg" alt="Book image">
+						<h3>Civil PE Exam Breadth and Water Resources and Environmental Depth</h3>
+						<ul>
+							<li><b>Author: </b>David Gruttadauria</li>
+							<li><b>Publisher: </b>CreateSpace</li>
+							<li><b>Year Published: </b>Feb 2018</li>
+							<li><b>ISBN: </b>978-1986094832</li>
+							<li><b>Category: </b>Engineering</li>
+							<li><b>Status: </b>Available</li>
+							<a class="btn" href="">Borrow</a>
+							<a class="btn" href="">Buy book</a>
+						</ul>
+					  </section>			
+		  
+				  </div>
+	</div>
+
+	<div class="books" id="tabs-4">
+			<div class="books-col-1">
+				  <!-- Book 1 -->
+				  <section class="book-item-1">
+					<img src="/resources/images/book-t1.jpg" alt="Book image">
+					<h3>Information Technology Essentials Volume 1: 
+						Introduction to Information Systems
+						</h3>
+					<ul>
+						<li><b>Author: </b>Eric Frick</li>
+						<li><b>Publisher: </b>Independently published</li>
+						<li><b>Year Published: </b>Nov 2019</li>
+						<li><b>ISBN: </b>978-1708175146</li>
+						<li><b>Category: </b>Information Technology</li>
+						<li><b>Status: </b>Available</li>
+						<a class="btn" href="">Borrow</a>
+						<a class="btn" href="">Buy book</a>
+					</ul>
+				  </section>
+		
+				  <!-- Book 2 -->
+				  <section class="book-item-2">
+					<img src="/resources/images/book-t2.jpg" alt="Book image">
+					<h3>C# 11 and .NET 7 – Modern Cross-Platform Development Fundamentals</h3>
+					<ul>
+						<li><b>Author: </b>Mark J. Price</li>
+						<li><b>Publisher: </b>Packt Publishing</li>
+						<li><b>Year Published: </b>Nov 2022</li>
+						<li><b>ISBN: </b>978-1803237800</li>
+						<li><b>Category: </b>Information Technology</li>
+						<li><b>Status: </b>Available</li>
+						<a class="btn" href="">Borrow</a>
+						<a class="btn" href="">Buy book</a>
+					</ul>
+				  </section>
+		
+				  <!-- Book 3 -->
+				  <section class="book-item-2">
+					<img src="/resources/images/book-t3.jpg" alt="Book image">
+					<h3>Beginning C++ Game Programming: 
+						Learn to program with C++ by building fun games, 2nd Edition
+						</h3>
+					<ul>
+						<li><b>Author: </b>John Horton</li>
+						<li><b>Publisher: </b>Packt Publishing</li>
+						<li><b>Year Published: </b>Oct 2019</li>
+						<li><b>ISBN: </b>978-1838648572</li>
+						<li><b>Category: </b>Information Technology</li>
+						<li><b>Status: </b>Available</li>
+						<a class="btn" href="">Borrow</a>
+						<a class="btn" href="">Buy book</a>
+					</ul>
+				  </section>
+		
+				</div>
+				<div class="books-col-2">
+					<!-- Book 4 -->
+					<section class="book-item-1">
+					  <img src="/resources/images/book-t4.jpg" alt="Book image">
+					  <h3>Mastering Roblox Coding: The unofficial guide to leveling up your Roblox scripting skills and building games using Luau programming</h3>
+					  <ul>
+						  <li><b>Author: </b>Mark Kiepe</li>
+						  <li><b>Publisher: </b>Packt Publishing</li>
+						  <li><b>Year Published: </b>Aug 2022</li>
+						  <li><b>ISBN: </b>978-1801814041</li>
+						  <li><b>Category: </b>Information Technology</li>
+						  <li><b>Status: </b>Available</li>
+						  <a class="btn" href="">Borrow</a>
+						  <a class="btn" href="">Buy book</a>
+					  </ul>
+					</section>
+		
+					<!-- Book 5 -->
+					<section class="book-item-2">
+					  <img src="/resources/images/book-t5.jpg" alt="Book image">
+					  <h3>Mastering Adobe Photoshop Elements 2023: 
+						Bring out the best in your images using Adobe Photoshop
+						</h3>
+					  <ul>
+						  <li><b>Author: </b>Robin Nichols</li>
+						  <li><b>Publisher: </b>Packt Publishing</li>
+						  <li><b>Year Published: </b>Dec 2022</li>
+						  <li><b>ISBN: </b>978-1803248455</li>
+						  <li><b>Category: </b>Information Technology</li>
+						  <li><b>Status: </b>Available</li>
+						  <a class="btn" href="">Borrow</a>
+						  <a class="btn" href="">Buy book</a>
+					  </ul>
+					</section>
+		
+					<!-- Book 6 -->
+					<section class="book-item-2">
+						<img src="/resources/images/book-t6.jpg" alt="Book image">
+						<h3>Microsoft 365: 11 Books in 1: The Ultimate All-in-One Bible to Microft Applications with Step-by-Step Tutorials</h3>
+						<ul>
+							<li><b>Author: </b>Benjamin Zeldovich</li>
+							<li><b>Publisher: </b>Independently published</li>
+							<li><b>Year Published: </b>Dec 2022</li>
+							<li><b>ISBN: </b>979-8363221682</li>
+							<li><b>Category: </b>Information Technology</li>
+							<li><b>Status: </b>Available</li>
+							<a class="btn" href="">Borrow</a>
+							<a class="btn" href="">Buy book</a>
+						</ul>
+					  </section>			
+		  
+				  </div>
+	</div>
+</div>
+<!--footer-->
+<div id="footer"></div>
+
+<script>
+	// if document is ready/loaded
+	$(document).ready(function(){
+
+		//include navigation links
+		$("#nav-header").load('nav-header.html');
+		$("#footer").load('footer.html');
+	})
+</script>   
+
+</body>
+</html>

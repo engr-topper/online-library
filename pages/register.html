@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Registration</title>
+
+        <!-- External CSS link -->
+        <link rel="stylesheet" href="/css/style.css">
+
+	    <!--jQuery CDN-->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Dancing+Script&display=swap" rel="stylesheet">
+   		
+	</head>
+ 
+	<body>
+
+		<!-- navigation header -->
+		<div id="nav-header"></div>
+	
+	<h1>MEMBERSHIP FORM</h1>
+	
+<table border="8" class="center">		 
+	<form id="reg-form">
+    <tr>
+        <td>Title</td>
+        <td>
+            <select name="" id="">
+				<option value="" selected>Choose One:</option>
+				<option value="Mr">Mr.</option>
+				<option value="Ms">Ms.</option>
+				<option value="Mrs">Mrs.</option>
+        </td>
+    </tr>
+    <tr>
+        <td>First Name*</td>
+        <td>  
+			<input type="text" id="firstName" name="firstName" required maxlength="50" autofocus>
+        </td>  
+    </tr>
+    <tr>
+        <td>Last Name*</td>
+        <td>
+			<input type="text" id="lastName" name="lastName" required maxlength="50">
+        </td>
+    </tr>
+    <tr>
+        <td>Email Address*</td>
+        <td>
+			<input id="email" type = text name = "emailaddress" required maxlength="75"></input>
+        </td>
+    </tr>
+	<tr>
+        <td>Country*</td>
+        <td>
+			<input type="text" id="country" name="country" required maxlength="50">
+        </td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+		<td>
+			<input type="radio" name="gender" value="m"> Male  <br>
+			<input type="radio" name="gender" value="f"> Female	
+		</td>
+    </tr>
+	<br><br>
+	<tr>
+		<td>Choose DOB*</td>
+		<td>	
+			<input type="date" name="bday" max="2002-01-01" min="1970-01-01" required><br>
+		</td>
+    <tr>
+        <td>Type</td>
+		<td>
+			<input type="checkbox" name="" value="Student"> Student <br>
+			<input type="checkbox" name="" value="Working Adult">Working Adult <br>
+		</td>
+    </tr>
+	<tr>
+	    <td> Mobile/Phone Number*</td>
+	    <td>
+		    <input type="tel" id="phone" name="phone" required>
+	    </td>
+	</tr>
+	<tr>
+        <td>Book Category Interested </td>
+        <td>
+			<input type="text" id="bookCategory" name="bookCategory" maxlength="50">
+        </td>  
+    </tr>
+	<tr>
+        <td>Password*</td>
+        <td>
+			<input type="password" id="pass" required>
+        </td>  
+    </tr>
+    <tr>
+        <td>(*) required</td>
+        <td>
+			<input type="submit" name="Submit" value="Submit" style="background-color: #04AA6D; border: 0; padding: 5px;">
+			<input type="reset" name="Reset" value="Reset" style="background-color: #f44336; border: 0; padding: 5px;">
+        </td>  
+    </tr>
+    </form>
+</table>
+	
+    <!-- for alert message -->
+    <p id="msg"></p>
+<!--footer-->
+<div id="footer"></div>
+
+<script>
+	// if document is ready/loaded
+	$(document).ready(function(){
+
+		//include navigation links
+		$("#nav-header").load('nav-header.html');
+		$("#footer").load('footer.html');
+
+	 //initialize a variable for user table
+	 let users;
+            
+            //if submit button is clicked (main function)
+            $('#reg-form').submit(function() {
+
+                //get user inputs
+                const email = $('#email').val();
+                const pass = $('#pass').val();
+                const firstName = $('#firstName').val();
+
+                //check for empty input(show alert or save info)
+                if(email === "" || pass === "" || firstName === "") {
+                    $('#msg').html('Fill in all required fields.');
+                } else {
+                    saveUser(email, pass, firstName);
+                }
+
+                //clear input fields then end function
+                $('#reg-form').trigger('reset');
+                return false;
+            });
+
+            //callback functions
+
+            //for saving user credentials
+            function saveUser(email, pass, firstName) {
+
+                //if no users table existing, users will be an empty array; otherwise, get json in localstorage
+                if(localStorage.getItem('users') === null) {
+                    users = [];
+                } else {
+                    users = JSON.parse(localStorage.getItem('users'));
+                }
+
+                //find email in users table (to check if already registered)
+                let result = users.find(val => val.email === email);
+
+                //check if email exists
+                if(typeof result !== "undefined") {
+
+                    //alert for existing email
+                    alert("Email already in use!")
+                
+                } else {
+
+                    //add new credentials to users table
+                    users.push({
+                        email: email,
+                        password: pass,
+                        firstname: firstName
+                    });
+
+                    //save new list to localstorage as json
+                    localStorage.setItem('users', JSON.stringify(users));
+
+                    //show success message
+                    alert("Registration successful!")
+
+                }
+
+                return false;
+            }
+        });
+</script>   
+	</body>
+</html>

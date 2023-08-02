@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Books</title>
+
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="/css/style.css">
+
+        <!--jQuery CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Dancing+Script&display=swap" rel="stylesheet">
+   
+
+</head>
+<body>
+        <!-- navigation header -->
+        <div id="header-member-admin"></div>
+
+        <h1>MY BOOKS</h1>
+<div >
+        <h2 >Hi <i id="member-name">[Member Name]!</i></h2>
+    </div>
+            <p >Here are the list and status of books you bought or borrowed:</p>
+
+            <table style="width: 80%; text-align: center;">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Book Image</th>
+                        <th style="width: 20%">Book Details</th>
+                        <th style="width: 20%">Date Borrowed / Purchased</th>
+                        <th style="width: 20%">Date Returned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Book 1 Image
+                        </td>
+                        <td>
+                            Book Name
+                         </td>
+                         <td>
+                            Jan-01-1900
+                         </td>
+                         <td>
+                            Jan-01-1900
+                         </td>                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Book 2 Image
+                        </td>
+                        <td>
+                            Book Name
+                         </td>
+                         <td>
+                            Jan-01-1900
+                         </td>
+                         <td>
+                            Jan-01-1900
+                         </td>                        
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+    
+ <!--footer-->
+ <div id="footer"></div>
+
+ <script>
+     // if document is ready/loaded
+     $(document).ready(function(){
+
+         //include navigation links
+         $("#header-member-admin").load('header-member-admin.html');
+         $("#footer").load('footer.html');
+
+
+             //get 'current' variable in localstorage
+    let current = localStorage.getItem('current');
+
+//get 'users' table in localstorage
+let table = JSON.parse(localStorage.getItem('users'));
+
+//get item from table using 'current' variable
+let userInfo = table.find(val => val.email === current);
+
+//get the firstname
+let firstname = userInfo.firstname;
+console.log(firstname);
+
+$('#member-name').html(firstname);
+
+     })
+ </script>   
+</body>
+</html>

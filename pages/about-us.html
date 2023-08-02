@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!--jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+</head>
+<body class="aboutus-page">
+
+    <!-- navigation header -->
+    <div id="nav-header"></div>
+
+ <div >
+    <h1>ABOUT US</h1>
+    <div class="mission-container">
+    <h2>MISSION</h2>
+   <p style="text-align: justify;">The Silent Library fosters community connections by providing the space and resources for patrons 
+    to be educated, enriched, and entertained.</p>
+   <br>
+   <h2>VISION</h2>
+   <p style="text-align: justify;">To make all the published works of humankind available to everyone in the world. 
+    While large in scope and ambition, this goal is within our grasp. 
+    Achieving it will require the participation of librarians, authors, government officials and technologists.</p>
+    </div>
+</div>
+
+<!--footer-->
+   <div id="footer"></div>
+
+   <script>
+       // if document is ready/loaded
+       $(document).ready(function(){
+
+           //include navigation links
+           $("#nav-header").load('nav-header.html');
+           $("#footer").load('footer.html');
+       })
+   </script>   
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Borrowers List</title>
+    <!-- External CSS link -->
+	<link rel="stylesheet" href="/css/style.css">
+
+    <!--jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Dancing+Script&display=swap" rel="stylesheet">
+   
+
+
+
+</head>
+<body>
+    <!-- navigation header -->
+    <div id="header-member-admin"></div>
+<h2>Welcome <i>Admin!</i></h2>
+<h2>BORROWERS LIST</h2>
+
+<div style="height: 500px;">
+<table style="width: 80%; text-align: center;" class="borrowers-list" id="borrowersList">
+    <thead>
+        <tr>
+            <th>Reference #</th>
+            <th>Name (Borrower)</th>
+            <th>Email Address</th>
+            <th>Book Name</th>
+            <th>Date Borrowed</th>
+            <th>Date Returned</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+   <tbody id="tblbody">
+   </tbody>
+
+   </table>
+
+</div>
+<script type="text/javascript" src="/index.js"></script>
+
+
+
+<!--footer-->
+<div id="footer"></div>
+
+<script>
+    // if document is ready/loaded
+    $(document).ready(function(){
+
+        //include navigation links
+        $("#header-member-admin").load('header-member-admin.html');
+        $("#footer").load('footer.html');
+    })
+
+  
+</script>  
+<script>  
+bindUserData();
+</script>  
+
+</body>
+</html>

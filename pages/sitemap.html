@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site Map</title>
+
+    
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="/css/style.css">
+
+        <!--jQuery CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Dancing+Script&display=swap" rel="stylesheet">
+   
+
+</head>
+<body>
+     <!-- navigation header -->
+    <div id="nav-header"></div>
+    
+    <h1>SITE MAP</h1>
+    <div class="sitemap-page" style="margin-left: 50px;">
+    <dl>
+
+       
+        <dt> <a href="books-list.html">Books</a></dt>
+        <dd>Search by Title</dd>
+        <dd>Search by Author</dd>
+        <dd>Search by Publisher</dd>
+        <dd>Search by ISBN</dd>
+        <dd>Search by Category</dd>
+
+        <br>
+
+        <dt> <a href="events.html">Events</a></dt>
+        <dd>Featured Events</dd>
+        <dd>Event Calendar & Info</dd>
+        <dd>How to Join</dd>
+
+        <br>
+
+        <dt> <a href="enquiry.html">Contact Us</a></dt>
+        <dd>Submit Enquiry Form </dd>
+        <dd>Contact No.</dd>
+        <dd>Email address</dd>
+        <dd>Location</dd>
+
+        <br>
+
+        <dt> <a href="privacy-policy.html">Privacy Policy</a></dt>
+        <dd>Terms and Conditions</dd>
+
+        <br>
+
+        <dt> <a href="promotions.html">Promotions</a></dt>
+        <dd>Featured Promotions</dd>
+        <dd>Discounted Books</dd>
+
+        <br>
+
+        <dt> <a href="register.html">Register</a></dt>
+        <dd>Sign Up as a Member</dd>
+
+        <br>
+
+        <dt> <a href="about-us.html">About Us</a></dt>
+        <dd>Mission</dd>
+        <dd>Vision</dd>
+
+        <br>
+
+        <dt> <a href="member-log-in.html">Already a Member?</a></dt>
+        <dd>Access My Books</dd>
+    </dl>
+</div>
+
+<!--footer-->
+<div id="footer"></div>
+
+<script>
+    // if document is ready/loaded
+    $(document).ready(function(){
+
+        //include navigation links
+        $("#nav-header").load('nav-header.html');
+        $("#footer").load('footer.html');
+    })
+</script>   
+
+</body>
+</html>
